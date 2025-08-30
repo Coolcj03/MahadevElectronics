@@ -16,8 +16,13 @@ from crud import *
 # Load environment variables
 load_dotenv()
 
-# Create database tables
-Base.metadata.create_all(bind=engine)
+# Create database tables only if connection is available
+try:
+    Base.metadata.create_all(bind=engine)
+    print("Database tables created successfully")
+except Exception as e:
+    print(f"Warning: Could not create database tables during startup: {e}")
+    print("Tables will be created when first accessed")
 
 app = FastAPI(
     title="Mahadeva Electronics API",
