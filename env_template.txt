@@ -1,0 +1,14 @@
+# Database Configuration
+DATABASE_URL=postgresql://postgres:UmGrrBFgYWuuOybxciyqrvTCYjRHvSFN@yamanote.proxy.rlwy.net:31457/railway
+
+# JWT Settings
+SECRET_KEY=your-super-secret-key-here-change-this-in-production
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# Admin User
+ADMIN_EMAIL=admin@mahadeva.com
+ADMIN_PASSWORD=admin123
+
+# Server Settings
+DEBUG=False
+ALLOWED_HOSTS=website-production-bacf.up.railway.app
